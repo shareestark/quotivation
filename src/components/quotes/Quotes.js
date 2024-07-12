@@ -1,14 +1,19 @@
 import React from "react";
 import QuoteCard from "./QuoteCard";
+import CategoryForm from "./CategoryForm";
 
-function Quotes ({ quotes }) {
+function Quotes ({ filteredQuotes, category, categories, onCategoryChange }) {
     return (
     <section className="all-quotes">
         <div className="quotes wrapper">
-        {quotes.map((quote) => (
+          <div className="category-header">
+          <p>Browse through your collection of quotes</p>
+            <CategoryForm categories={categories} category={category} onCategoryChange={onCategoryChange} />
+          </div>
+          {filteredQuotes.map((quote) => (
           <QuoteCard key={quote.id} quote={quote} />
         ))}
-      </div>
+        </div>
     </section>
     );
 }
