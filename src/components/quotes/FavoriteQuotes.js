@@ -23,7 +23,7 @@ const FavoriteQuotes = ({ favoriteQuotes, maxFaves, removeFromFavorites }) => {
         {favoriteQuotes.length < maxFaves && (
           <div className='favorite-quotes-description'>
             <p>
-              You can add up { maxFaves - favoriteQuotes.length} to 3 favorites by selecting from the options below.
+              You can add up { remainingFavoriteAmount} to 3 favorites by selecting from the options below.
               <br />
               Once you choose, they will appear here.
             </p>
